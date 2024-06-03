@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const makeDiff = (object1, object2) => {
+function makeDiff(object1, object2) {
   const keysObject1 = _.keys(object1);
   const keysObject2 = _.keys(object2);
   const allKeys = _.union(keysObject1, keysObject2);
@@ -16,7 +16,7 @@ const makeDiff = (object1, object2) => {
     }
 
     if (object1[key] === object2[key]) {
-      return { type: "uchanged", value: object1[key], key };
+      return { type: "unchanged", value: object1[key], key };
     }
 
     if (object1[key] !== object2[key]) {
@@ -27,8 +27,16 @@ const makeDiff = (object1, object2) => {
         key,
       };
     }
+
+    if (_.isPlainObject(object1[key]) && _.isPlainObject(object2[key])) {
+      return {
+        type: "nested",
+        children: makeDiff(object1[key], object2[key]),
+        key,
+      };
+    }
   });
   return result;
-};
+}
 
 export default makeDiff;
