@@ -3,8 +3,8 @@ import fs from "fs";
 import * as path from "path";
 import getParse from "./parsers.js";
 import formatDiff from "./formatters/index.js";
-
-const absPath = (filepath) => path.resolve(process.cwd(), filepath);
+import { cwd } from "node:process";
+const absPath = (filepath) => path.resolve(cwd(), filepath);
 
 const getExtention = (filepath) =>
   path.extname(filepath).slice(1).toLowerCase();
