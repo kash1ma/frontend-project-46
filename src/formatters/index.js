@@ -8,7 +8,7 @@ const formatDiff = (diffTree, format) => {
   if (format === "json") {
     return formatJson(diffTree);
   }
-  throw new Error("Unfortunately, this format is not supported.");
+  throw new Error("This format is not supported.");
 };
 
 export default formatDiff;
