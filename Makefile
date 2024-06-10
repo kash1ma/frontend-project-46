@@ -10,5 +10,7 @@ run:
 	gendiff __fixtures__/file1.json __fixtures__/file2.json
 run-json:
 	gendiff -f json __fixtures__/file1.json __fixtures__/file2.json
-
-
+test: 
+	npm test
+coverage:
+	npx jest --coverage

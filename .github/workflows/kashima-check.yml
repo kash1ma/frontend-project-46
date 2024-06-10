@@ -1,0 +1,15 @@
+name: kashima-check
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install modules
+        run: make install
+      - name: Run tests
+        run: make test
+      - name: Run coverage
+        run: make coverage

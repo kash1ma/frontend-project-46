@@ -8,6 +8,8 @@ const getParse = (filepath, extension) => {
       return yaml.load(filepath);
     case "yml":
       return yaml.load(filepath);
+    default:
+      throw new Error("Invalid extension");
   }
 };
 
