@@ -2,10 +2,10 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/kash1ma/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kash1ma/frontend-project-46/actions)",
-  "main": "gendiff.js",
+  "main": "bin/gendiff.js",
   "type": "module",
   "scripts": {
-    "test": "npx --experimental-vm-modules jest"
+    "test": "npx jest"
   },
   "author": "",
   "license": "ISC",
