@@ -1,8 +1,8 @@
 import fs from "fs";
 import * as path from "path";
-import makeDiff from "/makeDiff.js";
-import getParse from "/parsers.js";
-import formatDiff from "/formatters/index.js";
+import makeDiff from "makeDiff.js";
+import getParse from "parsers.js";
+import formatDiff from "formatters/index.js";
 import process from "process";
 
 const absPath = (filepath) => path.resolve(process.cwd(), filepath).trim();
