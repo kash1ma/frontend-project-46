@@ -11,6 +11,7 @@ program
     "output format [stylish, json, plain]",
     "stylish"
   )
+  .option("--colors", "lol")
   .arguments("<filepath1> <filepath2>")
   .helpOption("-h, --help", "output usage information")
   .action((filepath1, filepath2) =>
