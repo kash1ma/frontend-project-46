@@ -12,6 +12,8 @@ program
     "stylish"
   )
   .option("--colors", "lol")
+  .option("--runInBald", "lol")
+  .option("--bail", "lol")
   .arguments("<filepath1> <filepath2>")
   .helpOption("-h, --help", "output usage information")
   .action((filepath1, filepath2) =>
