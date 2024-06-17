@@ -5,7 +5,7 @@
   "main": "bin/gendiff.js",
   "type": "module",
   "scripts": {
-    "test": "npx jest --colors"
+    "test": "npx jest"
   },
   "author": "",
   "license": "ISC",
